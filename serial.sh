@@ -1,4 +1,6 @@
 #!/bin/bash
+# Made to work along with statebeta.sh
+
 if [ $# = 0 ]
 then
 echo Usage : $0 *data*

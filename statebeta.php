@@ -1,6 +1,15 @@
 <?php
+// Speak to arduino with PHP
+// CC BY-NC-SA 2012 lululombard
+// You need serial.sh with chmod 777 in /var/www to use this. 
+// You need to disable terminal on /dev/ttyAMA0 : "nano /boot/cmdline.txt", and delete "console=ttyAMA0,115200 kgdboc=ttyAMA0,115200".  CTRL+X to save.
+// Then, "nano /etc/inittab", go to the last line and add "#" in front of "2:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100"
+// Made to work with "domotique.ino", with ardunio connected to rx/tx of the GPIOs
+// Not yet commented, as the name says, it's beta !
+
         $screen_name = "arduino";
         $user = "www-data";
+        
         $list = shell_exec("ls /var/run/screen/S-".$user);
         if (strpos($list, $screen_name) == FALSE) {
                 exec('screen -dmS arduino /dev/ttyAMA0 115200');
