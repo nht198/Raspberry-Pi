@@ -14,6 +14,7 @@
         if (strpos($list, $screen_name) == FALSE) {
                 exec('screen -dmS arduino /dev/ttyAMA0 115200');
                 sleep(1);
+                exec('screen -S arduino -X height 1');
                 exec('/var/www/serial.sh 2');
                 header('Location: '.$_SERVER['PHP_SELF']);
         }

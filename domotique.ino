@@ -22,12 +22,6 @@ void loop() {
       }
       break;
 
-    case '2': 
-      for (byte i = 0; i < 24; ++i) {
-        Serial.println();
-        Serial.print("BOOT");
-      }
-
     case 'a'...'l': // GCC only (Not C standard)
       byte pin = cmd - 'a' + 2;
       if (digitalRead(pin) == LOW)
