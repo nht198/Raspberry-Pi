@@ -18,13 +18,15 @@ else {                                                                          
 	echo '<a href="?operation=boot">Boot '. $mac .'</a>';                   // Show the link to reboot
 }
 
+echo "<br />";
+
 $ping = shell_exec("ping -t 1 -n 1 ".$ip);
 echo $ping;
-//        if (strpos($ping, "100%") == FALSE) {
-//            echo 'PC OFF';
-//        }
-//        else {
-//            echo 'PC ON';
-//        }
+        if (strpos($ping, "100%") == FALSE) {
+            echo 'PC OFF';
+        }
+        else {
+            echo 'PC ON';
+        }
 
 ?>
