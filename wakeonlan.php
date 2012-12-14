@@ -20,9 +20,8 @@ else {                                                                          
 
 echo "<br />";
 
-$ping = shell_exec("ping -t 1 -n 1 ".$ip);
-echo $ping;
-        if (strpos($ping, "100%") == FALSE) {
+$ping = shell_exec("ping -t 1 -c 1 ".$ip);
+        if (strpos($ping, "100%") != FALSE) {
             echo 'PC OFF';
         }
         else {
