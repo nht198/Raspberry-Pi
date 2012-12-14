@@ -21,6 +21,11 @@ void loop() {
         Serial.write(';');
       }
       break;
+    case '1': 
+      for (byte i = 0; i <= 25; ++i){
+        Serial.println("BOOT FILLING LINES FOR SCREEN");
+      }
+      break;
 
     case 'a'...'l': // GCC only (Not C standard)
       byte pin = cmd - 'a' + 2;
