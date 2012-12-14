@@ -21,7 +21,7 @@ void loop() {
         Serial.write(';');
       }
       break;
-    case '1': 
+    case '2': 
       for (byte i = 0; i <= 25; ++i){
         Serial.println("BOOT FILLING LINES FOR SCREEN");
       }
