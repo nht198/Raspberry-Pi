@@ -18,7 +18,7 @@ else {                                                                          
 
 $ping = shell_exec("ping -t 1 -c 1 ".$ip);                                      // Do a ping
         if (strpos($ping, "100%") != FALSE) {                                   // If this ping has 100% lost, host is down
-            echo 'PC is OFF<a href="?operation=boot">Boot '. $mac .'</a>';      // Ask to boot
+            echo 'PC is OFF <a href="?operation=boot">Boot '. $mac .'</a>';     // Ask to boot
         }
         else {                                                                  // If the ping is not lost
             echo $ip.' is ON';                                                  // Say that that PC is ON.
