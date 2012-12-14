@@ -15,17 +15,13 @@ if ($_GET["operation"] == "boot") {                                             
 }
 
 else {                                                                          // If not in URL
-	echo '<a href="?operation=boot">Boot '. $mac .'</a>';                   // Show the link to reboot
+
+$ping = shell_exec("ping -t 1 -c 1 ".$ip);                                      // Do a ping
+        if (strpos($ping, "100%") != FALSE) {                                   // If this ping has 100% lost, host is down
+            echo 'PC is OFF<a href="?operation=boot">Boot '. $mac .'</a>';      // Ask to boot
+        }
+        else {                                                                  // If the ping is not lost
+            echo $ip.' is ON';                                                  // Say that that PC is ON.
+        }
 }
-
-echo "<br />";
-
-$ping = shell_exec("ping -t 1 -c 1 ".$ip);
-        if (strpos($ping, "100%") != FALSE) {
-            echo 'PC OFF';
-        }
-        else {
-            echo 'PC ON';
-        }
-
 ?>
