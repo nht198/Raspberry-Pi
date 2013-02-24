@@ -4,7 +4,7 @@
 <!--
 function refresh(){
     document.images["pic"].src="outfile.jpeg?<? echo md5_file('/var/www/outfile.jpeg'); ?>";
-setTimeout('refresh()', 100);}
+setInterval('refresh()', 500);}
 
 if(document.images)window.onload=refresh;
 
