@@ -22,9 +22,11 @@ $('#refresh').load('streaming.php').fadeIn("slow");
 </head> 
 
 <body>
-<img id="pic" width="800" height="600"/>
+<center>
+<img id="pic" height="100%"/>
 <div id="refresh">
 <? exec('streamer -c /dev/video0 -b 16 -o /var/www/outfile.jpeg'); ?>
 </div>
+</center>
 </body>
 </html>
