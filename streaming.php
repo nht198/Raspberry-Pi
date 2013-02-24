@@ -1,9 +1,3 @@
-<?
-if ($_GET['ctrl']=="start")
-    exec('sudo screen -dmS webcam python3 /var/www/refresh.py');
-if ($_GET['ctrl']=="stop")
-    exec('sudo screen -p 0 -S webcam -X kill');
-?>
 <html>
 <head>
 <script type="text/javascript">
