@@ -1,0 +1,248 @@
+@charset "utf-8";
+/* CSS Document */
+    @font-face {  
+      font-family: "FontAwesome";  
+      src: url("fontawesome-webfont.eot");  
+      src: url("fontawesome-webfont.eot?#iefix") format('eot'),   
+           url("fontawesome-webfont.woff") format('woff'),   
+           url("fontawesome-webfont.ttf") format('truetype');  
+      font-weight: normal;  
+      font-style: normal;  
+    }
+	body {
+		background-color:#222222;
+		font-family: Helvetica, Arial, sans-serif;
+		color: #FFF;
+                text-align:center;
+	}
+	a {
+		margin-top:125px;
+		display: block;  
+   	 	position: relative;  
+                text-decoration: none;  
+		color:#FFF;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	#circle1off {
+                font-family: FontAwesome;
+                font-size: 250px;
+		margin-left:auto;
+		margin-right:auto;
+		background: -webkit-gradient(
+			linear,
+			left top, left bottom,
+			from(#00ff00),
+			to(#003300)
+		);
+		background: -webkit-linear-gradient(
+			top,
+			#00ff00,
+			#003300
+		);
+		background: -moz-linear-gradient(
+			top,
+			#00ff00,
+			#003300
+		);
+		background: -o-linear-gradient(
+			top,
+			#00ff00,
+			#003300
+		);
+		background: linear-gradient(
+			top,
+			#00ff00,
+			#003300
+		);
+		border-radius:50%;
+		width:900px;
+		height:900px;
+		border:2px solid #009900;
+		left:45%;
+	}
+	#circle2off {
+		margin-left:auto;
+		margin-right:auto;
+		margin-top:100px;
+		background: -webkit-gradient(
+			linear,
+			left top, left bottom,
+			from(#003300),
+			to(#00ff00)
+		);
+		background: -webkit-linear-gradient(
+			top,
+			#003300,
+			#00ff00
+		);
+		background: -moz-linear-gradient(
+			top,
+			#003300,
+			#00ff00
+		);
+		background: -o-linear-gradient(
+			top,
+			#003300,
+			#00ff00
+		);
+		background: linear-gradient(
+			top,
+			#003300,
+			#00ff00
+		);
+		border-radius:50%;
+		width:700px;
+		height:700px;
+		border:2px solid #009900;
+		left:45%;
+	}
+        #circle1boot {
+                font-size: 140px;
+		margin-left:auto;
+		margin-right:auto;
+		background: -webkit-gradient(
+			linear,
+			left top, left bottom,
+			from(#999999),
+			to(#333333)
+		);
+		background: -webkit-linear-gradient(
+			top,
+			#999999,
+			#333333
+		);
+		background: -moz-linear-gradient(
+			top,
+			#999999,
+			#333333
+		);
+		background: -o-linear-gradient(
+			top,
+			#999999,
+			#333333
+		);
+		background: linear-gradient(
+			top,
+			#999999,
+			#333333
+		);
+		border-radius:50%;
+		width:900px;
+		height:900px;
+		border:2px solid #333333;
+		left:45%;
+	}
+	#circle2boot {
+		margin-left:auto;
+		margin-right:auto;
+		margin-top:100px;
+		background: -webkit-gradient(
+			linear,
+			left top, left bottom,
+			from(#333333),
+			to(#999999)
+		);
+		background: -webkit-linear-gradient(
+			top,
+			#333333,
+			#999999
+		);
+		background: -moz-linear-gradient(
+			top,
+			#333333,
+			#999999
+		);
+		background: -o-linear-gradient(
+			top,
+			#333333,
+			#999999
+		);
+		background: linear-gradient(
+			top,
+			#333333,
+			#999999
+		);
+		border-radius:50%;
+		width:700px;
+		height:700px;
+		border:2px solid #333333;
+		left:45%;
+	}
+        #circle1on {
+                font-size: 230px;
+		margin-left:auto;
+		margin-right:auto;
+		background: -webkit-gradient(
+			linear,
+			left top, left bottom,
+			from(#ff3333),
+			to(#660000)
+		);
+		background: -webkit-linear-gradient(
+			top,
+			#ff3333,
+			#660000
+		);
+		background: -moz-linear-gradient(
+			top,
+			#ff3333,
+			#660000
+		);
+		background: -o-linear-gradient(
+			top,
+			#ff3333,
+			#660000
+		);
+		background: linear-gradient(
+			top,
+			#ff3333,
+			#660000
+		);
+		border-radius:50%;
+		width:900px;
+		height:900px;
+		border:2px solid #660000;
+		left:45%;
+	}
+	#circle2on {
+		margin-left:auto;
+		margin-right:auto;
+		margin-top:100px;
+		background: -webkit-gradient(
+			linear,
+			left top, left bottom,
+			from(#660000),
+			to(#ff3333)
+		);
+		background: -webkit-linear-gradient(
+			top,
+			#660000,
+			#ff3333
+		);
+		background: -moz-linear-gradient(
+			top,
+			#660000,
+			#ff3333
+		);
+		background: -o-linear-gradient(
+			top,
+			#660000,
+			#ff3333
+		);
+		background: linear-gradient(
+			top,
+			#660000,
+			#ff3333
+		);
+		border-radius:50%;
+		width:700px;
+		height:700px;
+		border:2px solid #660000;
+		left:45%;
+	}
+        @media only screen and (max-device-width:480px) {
+            #circles {
+		margin-top:10%;
+            }
+	}
