@@ -3,7 +3,7 @@
 <script type="text/javascript">
 <!--
 function refresh(){
-    document.images["pic"].src="outfile.jpeg?<? echo md5_file('/var/www/outfile.jpeg'); ?>";
+    document.images["pic"].src="outfile.jpeg?<? echo md5_file('/var/www/streaming/outfile.jpeg'); ?>";
 setInterval('refresh()', 500);}
 
 if(document.images)window.onload=refresh;
@@ -25,7 +25,7 @@ $('#refresh').load('streaming.php').fadeIn("slow");
 <center>
 <img id="pic" height="100%"/>
 <div id="refresh">
-<? exec('streamer -c /dev/video0 -b 16 -o /var/www/outfile.jpeg'); ?>
+<? exec('streamer -c /dev/video0 -b 16 -o /var/www/streaming/outfile.jpeg'); ?>
 </div>
 </center>
 </body>

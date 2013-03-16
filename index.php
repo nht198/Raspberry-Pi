@@ -19,6 +19,11 @@ elseif ($_GET["vnc"] == "start") {
     exec('sudo vncserver :1');
 }
 
+if ($_GET["operation"] == "reboot") {
+	exec('sudo reboot');
+	echo '<script>window.alert("Le Raspberry Pi va redémarrer");</script>';
+}
+
 if (isset($_POST['tweet'])) {
         $tweet=$_POST['tweet'];
         $ip=  explode(".",$_SERVER['REMOTE_ADDR']);
@@ -235,6 +240,22 @@ include('pinfo/inc/header.php');
                     </div>
                 </div>
 
+                <div class="widget">
+                    <div class="widget-header"><h3><i class="icon-cog"></i> Raspberry Pi</h3></div>
+                    <div class="widget-content">
+                        <center><img src="pinfo/img/linux.png" width="90"></center>
+                        <hr>
+                        <?php
+                        echo "<small>";
+                        echo "&bull; <b>OS</b> : ".str_ireplace('"', '', str_ireplace('PRETTY_NAME="', '', exec("cat /etc/*-release | grep PRETTY_NAME=")))."<br>";  
+                        echo "&bull; <b>Kernel</b> : ".exec("uname -mrs")."<br>";
+                        echo "&bull; <b>Firmware</b> : ".exec("uname -v");
+                        echo "</small>";    
+                        ?>
+                        <center><a href="?operation=reboot" class="btn btn-danger btn-large">Reboot</a></center>
+                    </div>
+                </div>
+                
             </span>
         </div>
 
