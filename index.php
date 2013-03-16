@@ -39,8 +39,13 @@ if (isset($_POST['tweet'])) {
 
 if (isset($_POST['killall'])) {
         $process=$_POST['killall'];
-        exec('sudo killall '.$process);
-	echo '<script>window.alert("Processus killé !");</script>';
+        if ($process == ("apache2" OR "sshd" OR "getty" OR "mysqld" OR "sftp-server" OR "ifplugd")) {
+            echo '<script>window.alert("Vous ne pouvez pas kill '.$process.' !");</script>';
+        }
+        else {
+            exec('sudo killall '.$process);
+            echo '<script>window.alert("Processus killé !");</script>';
+        }
 }
     
 elseif ($_GET["vnc"] == "stop") {
