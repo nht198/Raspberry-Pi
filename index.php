@@ -6,7 +6,7 @@ $title = "Raspberry Pi";
 $mac = "54:04:A6:C1:16:60";
 $ip = "192.168.0.8";
 $vnc = "lululombard.fr";
-$api = '/var/www/twitterapi.pl';
+$api = '/var/www/pinfo/twitterapi.pl';
 
 // Ne rien modifier après cette ligne si vous ne savez pas ce que vous faites !
 session_start();
@@ -121,7 +121,6 @@ include('pinfo/inc/header.php');
                                         $file != 'pinfo' &&
                                         $file != 'favicon.ico' &&
                                         $file != 'index.php' &&
-                                        $file != 'twitterapi.pl' &&
                                         $file != '.pulse-cookie' //&&
                                     ) {
 
