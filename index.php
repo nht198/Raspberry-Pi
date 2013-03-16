@@ -37,7 +37,12 @@ if (isset($_POST['tweet'])) {
 	}
 }
 
-
+if (isset($_POST['killall'])) {
+        $process=$_POST['killall'];
+        exec('sudo killall '.$process);
+	echo '<script>window.alert("Processus killé !");</script>';
+}
+    
 elseif ($_GET["vnc"] == "stop") {
     exec('sudo killall Xtightvnc');
 }
@@ -212,15 +217,16 @@ include('pinfo/inc/header.php');
                 </div>
 
                 <div class="widget">
-                    <div class="widget-header"><h3><i class="icon-desktop"></i> Raspberry Pi</h3></div>
+                    <div class="widget-header"><h3><i class="icon-cogs"></i> Killall debug</h3></div>
                     <div class="widget-content">
-                        <?php
-                        echo "<small>";
-                        echo "&bull; <b>OS</b> : ".str_ireplace('"', '', str_ireplace('PRETTY_NAME="', '', exec("cat /etc/*-release | grep PRETTY_NAME=")))."<br>";  
-                        echo "&bull; <b>Kernel</b> : ".exec("uname -mrs")."<br>";
-                        echo "&bull; <b>Firmware</b> : ".exec("uname -v");
-                        echo "</small>";    
-                        ?>
+                       <center>
+                        <form method="post">
+                            <div class="form-horizontal">
+                                <input name="killall" type="text" class="input-large" value="screen">
+                                <input type="submit" class="btn btn-danger" value="Killall !"/>
+                            </div>
+                        </form>
+                        </center>
                     </div>
                 </div>
 
