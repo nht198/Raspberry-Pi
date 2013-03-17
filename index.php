@@ -44,7 +44,7 @@ if (isset($_POST['tweet'])) {
 
 if (isset($_POST['killall'])) {
         $process=$_POST['killall'];
-        if ($process == ("apache2" OR "sshd" OR "getty" OR "mysqld" OR "sftp-server" OR "ifplugd")) {
+        if ($process == ("apache2" OR "sshd" OR "getty" OR "mysqld" OR "sftp-server" OR "ifplugd" OR "sudo")) {
             echo '<script>window.alert("Vous ne pouvez pas kill '.$process.' !");</script>';
         }
         else {
